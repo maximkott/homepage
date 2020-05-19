@@ -1,0 +1,69 @@
+import React, { FC, ReactNode } from "react"
+import Head from "next/head"
+
+const Style = () => <style jsx global>{ `
+body {
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  font-weight: 300;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 1rem 0px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.3rem;
+  margin: 1rem 0px;
+  font-weight: 300;
+}
+a {
+  color: #0375d8;
+  text-decoration: none;
+}
+a:hover {
+  color: #004c8d;
+  text-decoration: underline;
+}
+.inline-list {
+  padding: 0px;
+}
+.inline-list li {
+  display: inline-block;
+}
+.inline-list li + li {
+  margin-left: 0.5rem;
+}
+` }</style>
+
+
+export type LayoutProps = {
+  children?: ReactNode | ReactNode[]
+}
+
+export const Layout: FC<LayoutProps> = (props) => {
+  const { children } = props
+
+  return (
+    <>
+      <Head>
+        <link rel="icon" type="image/png" href="/favicon.svg"/>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      </Head>
+      <Style/>
+
+      { children }
+    </>
+  )
+}
