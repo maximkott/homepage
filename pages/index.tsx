@@ -114,7 +114,7 @@ export default () => {
           </ul>
 
           <ul className="links inline-list">
-            <li><a href="/cv-maxym-kot.pdf"><FontAwesomeIcon icon={ faIdBadge }/> CV</a></li>
+            <li><a href="/cv"><FontAwesomeIcon icon={ faIdBadge }/> CV</a></li>
             <li><a href="https://github.com/maximkott"><FontAwesomeIcon icon={ faGithub }/> GitHub</a></li>
             <li><a href="https://twitter.com/maximkott"><FontAwesomeIcon icon={ faTwitter }/> Twitter</a></li>
             <li><a href="https://ch.linkedin.com/in/maximkott"><FontAwesomeIcon icon={ faLinkedin }/> LinkedIn</a></li>
