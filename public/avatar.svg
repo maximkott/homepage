@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0.601" y="0.123" width="110" height="110" style="fill: rgb(237, 81, 60);"/>
+  <rect width="110" height="110" style="fill: rgb(237, 81, 60);"/>
   <circle style="fill: rgb(255, 255, 255);" cx="183.823" cy="152.045" r="21.628" transform="matrix(0.275508, 0, 0, 0.275182, 0.43542, 0.089153)"/>
   <circle style="fill: rgb(255, 255, 255);" cx="246.133" cy="216.806" r="21.628" transform="matrix(0.275508, 0, 0, 0.275182, 0.43542, 0.089153)"/>
   <rect x="48.757" y="45.316" width="4.335" height="29.335" style="fill: rgb(255, 255, 255);"/>

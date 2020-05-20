@@ -2,6 +2,12 @@ import React, { FC, ReactNode } from "react"
 import Head from "next/head"
 
 const Style = () => <style jsx global>{ `
+html,
+body,
+body > div:first-child,
+div#__next {
+  height: 100%;
+}
 body {
   background: #fff;
   padding: 0px;
@@ -19,13 +25,14 @@ p {
 h1 {
   font-size: 3rem;
   line-height: 3rem;
-  margin: 1rem 0px;
+  margin: 1rem 0;
   font-weight: 300;
 }
 h2 {
   font-size: 1.3rem;
-  margin: 1rem 0px;
+  margin: 1rem 0;
   font-weight: 300;
+  line-height: 2rem;
 }
 a {
   color: #0375d8;
@@ -36,7 +43,8 @@ a:hover {
   text-decoration: underline;
 }
 .inline-list {
-  padding: 0px;
+  padding: 0;
+  margin: 0;
 }
 .inline-list li {
   display: inline-block;

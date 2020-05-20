@@ -2,49 +2,57 @@ import React from "react"
 import { Layout } from "../components/Layout"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faIdBadge } from "@fortawesome/free-regular-svg-icons"
-import { faGithub, faLinkedinIn, faStackOverflow, faTwitter, faNodeJs } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedin, faStackOverflow, faTwitter, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import Head from "next/head"
 
-const Style = () => <style jsx>{ `
+const Style = () => <style jsx>{`
 .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
   max-width: 400px;
-  margin: 6rem auto;
+  margin: 70px auto 50px auto;
+  padding: 0 20px;
   text-align: center;
+  flex-grow: 1;
 }
 .avatar {
   border-radius: 50%;
   width: 6rem;
+  overflow: hidden;
+  background: lime;
 }
 .top-skills {
-  margin: 3rem 0;
-}
-.top-skills img {
-  display: inline-block;
-  height: 1rem;
-  top: 0.1rem;
-  position: relative;
-}
-.top-skills li {
-  font-size: 1.2rem;
+  margin: 50px 0;
 }
 .top-skills li + li {
   margin-left: 1rem;
 }
+.top-skills img {
+  display: inline-block;
+  height: 2rem;
+}
 .links {
   font-size: 0.9rem;
 }
+.links li {
+  line-height: 2rem;
+}
+.links a {
+  color: #555;
+  font-size: 0.8rem;
+}
 .links svg {
   position: relative;
-  top: 0.1rem;
+  top: 0px;
   height: 0.9rem;
 }
 .built-with {
-  position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 20px;
-  padding: 0px;
-  margin: 0px;
+  margin-bottom: 10px;
 }
 .built-with img {
   height: 1rem;
@@ -60,21 +68,26 @@ const Style = () => <style jsx>{ `
 }
 
 @media (max-width: 400px) {
-  .container {
-    margin: 2rem 0;
-    padding: 1rem;
+  .content {
+    margin-top: 40px;
   }
   .top-skills li {
-    //display: block;
+    display: block;
   }
   .top-skills li + li {
+    margin-left: 0px;
+    margin-top: 15px;
   }
   .links li {
-    //display: block;
-    font-size: 1rem;
+    display: block;
+    font-size: 1.2rem;
+  }
+  .links li + li {
+    margin-left: 0;
   }
   .links svg {
-    height: 1rem;
+    height: 1.2rem;
+    top: 3px;
   }
 }
 ` }</style>
@@ -88,34 +101,37 @@ export default () => {
       <Style/>
 
       <div className="container">
-        <img className="avatar" src="/avatar.svg"/>
-        <h1>Maxim Kott</h1>
-        <h2>Passionate software developer from Zurich</h2>
+        <div className="content">
+          <img className="avatar" src="/avatar.svg"/>
 
-        <ul className="inline-list top-skills">
-          <li><img src="/icons/typescript.svg"/> TypeScript</li>
-          <li>{ "{" } <img src="/icons/react.svg"/> React { "}" }</li>
-          <li><img src="/icons/nodejs.svg"/> Node.js</li>
-        </ul>
+          <h1>Maxim Kott</h1>
+          <h2>Passionate software developer from Zurich</h2>
 
-        <ul className="links inline-list">
-          <li><a href="/cv-maxym-kot.pdf"><FontAwesomeIcon icon={ faIdBadge }/> CV</a></li>
-          <li><a href="https://ch.linkedin.com/in/maximkott"><FontAwesomeIcon icon={ faLinkedinIn }/> LinkedIn</a></li>
-          <li><a href="https://github.com/maximkott"><FontAwesomeIcon icon={ faGithub }/> GitHub</a></li>
-          <li><a href="https://twitter.com/maximkott"><FontAwesomeIcon icon={ faTwitter }/> Twitter</a></li>
-          <li><a href="https://stackoverflow.com/users/1734033/maximkott"><FontAwesomeIcon icon={ faStackOverflow }/> StackOverflow</a></li>
-        </ul>
+          <ul className="inline-list top-skills">
+            <li><img src="/logos/react.svg"/></li>
+            <li><img src="/logos/typescript.svg"/></li>
+            <li><img src="/logos/nodejs.svg"/></li>
+          </ul>
+
+          <ul className="links inline-list">
+            <li><a href="/cv-maxym-kot.pdf"><FontAwesomeIcon icon={ faIdBadge }/> CV</a></li>
+            <li><a href="https://github.com/maximkott"><FontAwesomeIcon icon={ faGithub }/> GitHub</a></li>
+            <li><a href="https://twitter.com/maximkott"><FontAwesomeIcon icon={ faTwitter }/> Twitter</a></li>
+            <li><a href="https://ch.linkedin.com/in/maximkott"><FontAwesomeIcon icon={ faLinkedin }/> LinkedIn</a></li>
+            <li><a href="https://stackoverflow.com/users/1734033/maximkott"><FontAwesomeIcon icon={ faStackOverflow }/> StackOverflow</a></li>
+          </ul>
+        </div>
+
+        <footer className="built-with">
+          <div className="divider">&lt;built-with/&gt;</div>
+          <ul className="inline-list">
+            <li><img src="/logos/react.svg"/></li>
+            <li><img src="/logos/typescript.svg"/></li>
+            <li><img src="/logos/nextjs.svg"/></li>
+            <li><img src="/logos/zeit.svg"/></li>
+          </ul>
+        </footer>
       </div>
-
-      <ul className="built-with">
-        <div className="divider">&lt;built-with/&gt;</div>
-        <ul className="inline-list">
-          <li><img src="/logos/react.svg"/></li>
-          <li><img src="/logos/typescript.svg"/></li>
-          <li><img src="/logos/nextjs.svg"/></li>
-          <li><img src="/logos/zeit.svg"/></li>
-        </ul>
-      </ul>
     </Layout>
   )
 }
