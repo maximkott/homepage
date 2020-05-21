@@ -2,10 +2,10 @@ import React from "react"
 import { Layout } from "../components/Layout"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faIdBadge } from "@fortawesome/free-regular-svg-icons"
-import { faGithub, faLinkedin, faStackOverflow, faTwitter, faNodeJs } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedin, faStackOverflow, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import Head from "next/head"
 
-const Style = () => <style jsx>{`
+const Style = () => <style jsx>{ `
 .container {
   display: flex;
   flex-direction: column;
@@ -118,7 +118,8 @@ export default () => {
             <li><a href="https://github.com/maximkott"><FontAwesomeIcon icon={ faGithub }/> GitHub</a></li>
             <li><a href="https://twitter.com/maximkott"><FontAwesomeIcon icon={ faTwitter }/> Twitter</a></li>
             <li><a href="https://ch.linkedin.com/in/maximkott"><FontAwesomeIcon icon={ faLinkedin }/> LinkedIn</a></li>
-            <li><a href="https://stackoverflow.com/users/1734033/maximkott"><FontAwesomeIcon icon={ faStackOverflow }/> StackOverflow</a></li>
+            <li><a href="https://stackoverflow.com/users/1734033/maximkott"><FontAwesomeIcon
+              icon={ faStackOverflow }/> StackOverflow</a></li>
           </ul>
         </div>
 
