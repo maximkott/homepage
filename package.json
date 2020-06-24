@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "download-cv": "curl 'https://docs.google.com/document/d/1w0B2FYsv5FsYcqA4d4_3TRtPmJbje7Iu8I1w0ua7lt8/export?format=pdf' -o public/cv-maxym-kot.pdf -s && echo '✔ Latest CV downloaded'"
+    "download-cv": "curl 'https://docs.google.com/document/d/1w0B2FYsv5FsYcqA4d4_3TRtPmJbje7Iu8I1w0ua7lt8/export?format=pdf' -o public/cv-maxym-kot.pdf -s && echo '✔ Latest CV downloaded'",
+    "release-cv": "yarn download-cv && git add public/cv-maxym-kot.pdf && git commit -m 'Update CV' && git push"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
